@@ -34,4 +34,4 @@ To run this project, you just need a modern web browser and a code editor (like 
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/movie-discovery-app.git](https://github.com/your-username/movie-discovery-app.git)
+   git clone [https://github.com/abrehamalayu244-dotcom/movie-verse)
