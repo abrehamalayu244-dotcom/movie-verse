@@ -1,0 +1,158 @@
+/* Reset default page spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+p,h2{
+    color: #e0e0e0; /* Light text for better contrast on dark background */
+    margin: 0.5rem 0.8rem;
+}
+body {
+    background-color: #141414; /* Dark cinema backdrop */
+    padding-top: 80px; /* Prevents content from hiding under fixed header */
+}
+
+/* Header Container */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertically center all items */
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo / Left side */
+.left-content h1 {
+    color: #e50914; /* Red cinema accent */
+    font-size: 1.5rem;
+    white-space: nowrap; /* Prevents logo text from breaking into two lines */
+}
+
+/* Search bar / Middle */
+.middle-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 1.5rem;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background-color: #2b2b2b;
+    color: #fff;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: #e50914;
+}
+
+/* Filters / Right side */
+.right-content {
+    display: flex;
+    gap: 0.5rem; /* Space between select boxes */
+}
+
+.right-content select {
+    background-color: #2b2b2b;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+   
+}
+
+.right-content select:hover {
+    background-color: #383838;
+}
+.right-content select:focus {
+    border-color: #e50914;
+    transition:border-color 0.2s ease;
+}
+
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    
+}
+.movie-card{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(224, 221, 221, 0.5);
+}
+
+.movie-poster {
+    width: 100%;
+    height:auto;
+    display: block;
+}
+/* Base hidden state */
+.hidden {
+  display: none !important;
+}
+
+/* Modal Dark Background Overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
